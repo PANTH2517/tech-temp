@@ -1,0 +1,7 @@
+{
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/events/:id", "destination": "/event.html" },
+    { "source": "/u/:handle", "destination": "/profile.html" }
+  ]
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#060608">
+<title>Team — TECHFEST '27</title>
+<meta name="description" content="Meet the organising team behind TECHFEST '27. Names and roles are placeholders.">
+<link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<main id="main">
+  <header class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="/">Home</a> / Team</p>
+      <h1>The <em>team</em></h1>
+      <p class="lede">The core team behind TECHFEST '27. Spin the sphere, hover to meet someone, click to read about them. Names and roles are placeholders until the real team is confirmed.</p>
+    </div>
+  </header>
+  <section class="wrap cloud" data-cloud-wrap>
+    <div class="cloud__stage" data-cloud role="img" aria-label="Interactive 3D sphere of the core team. The full list is below."></div>
+    <div class="cloud__tip" data-tip hidden></div>
+    <p class="cloud__hint">Drag to spin · hover to meet someone · click to read about them</p>
+    <article class="tmdetail" data-detail aria-live="polite"><p class="tmdetail__hint">Click a member of the sphere to read about them.</p></article>
+  </section>
+  <section class="wrap pagebody"><div class="team" data-team></div></section>
+</main>
+<script type="module" src="/src/pages/team.js"></script>
+</body>
+</html>

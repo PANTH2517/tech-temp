@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#060608">
+<title>Event — TECHFEST '27</title>
+<meta name="description" content="Event details for TECHFEST '27.">
+<link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<main id="main">
+  <header class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="/">Home</a> / <a href="/events.html">Events</a> / <span data-crumb>Event</span></p>
+      <h1 data-title></h1>
+      <div class="tags" data-tags></div>
+      <button class="twinbtn" type="button" data-twin aria-pressed="false"><span aria-hidden="true">⟲</span> Flip to the false twin</button>
+    </div>
+  </header>
+  <section class="wrap pagebody" data-body>
+    <div class="evd">
+      <div>
+        <p class="evd__desc" data-desc></p>
+        <h2>Rules</h2>
+        <ul class="rules" data-rules></ul>
+        <h2 data-att-h>Who is going</h2>
+        <div class="attend" data-attend></div>
+      </div>
+      <aside class="panel evd__aside">
+        <dl class="facts" data-facts></dl>
+        <div class="evd__cap"><span class="meter" data-meter><i></i></span><small><span data-reg-count></span><span data-spots></span></small></div>
+        <div class="evd__cta">
+          <button class="btn btn--lime btn--lg" type="button" data-reg>Register for this event</button>
+          <button class="btn" type="button" data-share>Copy link</button>
+        </div>
+      </aside>
+    </div>
+    <nav class="pn" aria-label="Other events" data-pn></nav>
+  </section>
+</main>
+<script type="module" src="/src/pages/event.js"></script>
+</body>
+</html>

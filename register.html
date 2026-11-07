@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#060608">
+<title>Create account — TECHFEST '27</title>
+<meta name="description" content="Create your TECHFEST '27 account, pick your events and get a customizable public profile.">
+<link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<main id="main">
+  <div class="wrap authwrap">
+    <div class="auth">
+      <div class="auth__intro">
+        <p class="eyebrow">Join TECHFEST '27</p>
+        <h1>Create your <em>account</em></h1>
+        <p class="lede">One account registers you for events and gives you a public profile you can customize: colours, layout, projects, skills and badges. Registration is ₹199 per person for all three days.</p>
+      </div>
+      <form class="panel formcard" data-form novalidate>
+        <div class="field"><label for="r-name">Full name</label><input id="r-name" name="name" autocomplete="name"><p class="field__err" data-err="name"></p></div>
+        <div class="row2">
+          <div class="field"><label for="r-email">Email</label><input id="r-email" name="email" type="email" autocomplete="email"><p class="field__err" data-err="email"></p></div>
+          <div class="field"><label for="r-pw">Password</label><input id="r-pw" name="password" type="password" autocomplete="new-password"><p class="field__err" data-err="password"></p></div>
+        </div>
+        <div class="field"><label for="r-college">College</label><input id="r-college" name="college" autocomplete="organization"><p class="field__err" data-err="college"></p></div>
+        <div class="field"><span class="label">Events you want to join <span class="field__hint">(optional, change any time)</span></span><div class="evpick evpick__grid" data-evpick></div></div>
+        <button class="btn btn--lime btn--lg" type="submit">Create account</button>
+        <p class="status" data-status role="status" aria-live="polite"></p>
+        <p class="status">Already have an account? <a class="link" href="/login.html">Log in</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+<script type="module" src="/src/pages/register.js"></script>
+</body>
+</html>

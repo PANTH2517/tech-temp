@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#060608">
+<title>Paradox Arcade — TECHFEST '27</title>
+<meta name="description" content="Three small games that break their own rules: find the angle of an impossible triangle, spot the lying sentence, and stop Zeno's clock. Scores go on a shared leaderboard.">
+<link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<main id="main">
+  <header class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="/">Home</a> / Arcade</p>
+      <h1>Paradox <em>arcade</em></h1>
+      <p class="lede">Three small games that break their own rules. Play, beat the board, and show off at the fest.</p>
+    </div>
+  </header>
+
+  <section class="wrap pagebody games">
+    <div class="field games__name" data-name-wrap>
+      <label for="g-name">Name for the leaderboard</label>
+      <input id="g-name" data-name maxlength="20" placeholder="Guest" autocomplete="nickname">
+    </div>
+
+    <article class="game" data-g="triangle">
+      <div class="game__info">
+        <p class="game__n">01</p>
+        <h2>Lock the triangle</h2>
+        <p class="game__d">An impossible triangle is hidden at a random angle. Drag it until it closes, then lock it in. A wrong lock costs 3 seconds. Fastest time wins.</p>
+        <div class="game__bar"><button class="btn btn--lime" type="button" data-start>Start</button><button class="btn" type="button" data-lock disabled>Lock it in</button></div>
+        <p class="game__msg" data-msg role="status" aria-live="polite">Press start.</p>
+        <div class="warm" aria-hidden="true"><span>Cold</span><div><i></i></div><span>Hot</span></div>
+      </div>
+      <div class="game__play"><div class="pen__stage game__stage" data-pen role="img" aria-label="3D impossible triangle. Drag to rotate."></div></div>
+      <aside class="game__board"><h3>Fastest</h3><ol data-board></ol></aside>
+    </article>
+
+    <article class="game" data-g="liar">
+      <div class="game__info">
+        <p class="game__n">02</p>
+        <h2>Spot the liar</h2>
+        <p class="game__d">Every sentence claims something about itself or about numbers. Decide if it is true or false before the bar runs out. One wrong answer ends the run. Keys: T for true, F for false.</p>
+        <div class="game__bar"><button class="btn btn--lime" type="button" data-start>Start</button></div>
+        <p class="game__msg" data-msg role="status" aria-live="polite">Press start.</p>
+      </div>
+      <div class="game__play">
+        <div class="liar" data-liar>
+          <p class="liar__streak">Streak <b data-streak>0</b></p>
+          <p class="liar__s" data-sentence aria-live="polite">Your sentence will appear here.</p>
+          <div class="liar__time"><i data-time></i></div>
+          <div class="liar__btns"><button class="btn btn--lg" type="button" data-ans="true" disabled>True</button><button class="btn btn--lg" type="button" data-ans="false" disabled>False</button></div>
+        </div>
+      </div>
+      <aside class="game__board"><h3>Longest streak</h3><ol data-board></ol></aside>
+    </article>
+
+    <article class="game" data-g="zeno">
+      <div class="game__info">
+        <p class="game__n">03</p>
+        <h2>Zeno's stopwatch</h2>
+        <p class="game__d">The counter climbs toward 10 but slows with every step, and then it disappears. Press stop at the exact moment it reads 9.00. Closer is better, up to 1000 points.</p>
+        <div class="game__bar"><button class="btn btn--lime" type="button" data-start>Start</button><button class="btn" type="button" data-stop disabled>Stop at 9.00</button></div>
+        <p class="game__msg" data-msg role="status" aria-live="polite">Press start.</p>
+      </div>
+      <div class="game__play"><div class="zeno" aria-hidden="true"><p class="zeno__v" data-v>0.00</p><div class="zeno__t"><i data-z></i><b></b></div></div></div>
+      <aside class="game__board"><h3>Best scores</h3><ol data-board></ol></aside>
+    </article>
+  </section>
+</main>
+<script type="module" src="/src/pages/games.js"></script>
+</body>
+</html>

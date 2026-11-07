@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#060608">
+<title>Schedule — TECHFEST '27</title>
+<meta name="description" content="Day-by-day schedule for TECHFEST '27, 12 to 14 February 2027 at NMIMS MPSTME Shirpur. Log in to highlight your own events.">
+<link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<main id="main">
+  <header class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="/">Home</a> / Schedule</p>
+      <h1>The <em>schedule</em></h1>
+      <p class="lede">Three days, 12 to 14 February 2027. Scroll to travel through time, or jump to a day. Events you registered for are highlighted when you are logged in.</p>
+    </div>
+  </header>
+
+  <section class="tt" data-tt aria-label="Schedule time tunnel">
+    <div class="tt__pin" data-tt-pin>
+      <div class="tt__rings" data-rings aria-hidden="true"></div>
+      <div class="tt__stage" data-stage></div>
+      <aside class="tt__side">
+        <p class="tt__count" aria-hidden="true"><b data-now>01</b> / <span data-total>00</span></p>
+        <div class="tt__days" data-tt-days role="group" aria-label="Jump to a day"></div>
+        <label class="switch" data-tt-mine-wrap hidden><input type="checkbox" data-tt-mine> Only my events</label>
+      </aside>
+      <div class="tt__bar" aria-hidden="true"><span data-tt-bar></span></div>
+      <p class="tt__hint" aria-hidden="true">Scroll to travel through time ↓</p>
+    </div>
+  </section>
+
+  <section class="wrap schedpage" data-list-wrap>
+    <div class="tabs" role="tablist" aria-label="Choose a day" data-tabs>
+      <label class="switch" data-mine-wrap hidden><input type="checkbox" data-mine> Only my events</label>
+    </div>
+    <div class="panel tl" data-tl role="tabpanel" aria-live="polite"></div>
+  </section>
+</main>
+<script type="module" src="/src/pages/schedule.js"></script>
+</body>
+</html>
